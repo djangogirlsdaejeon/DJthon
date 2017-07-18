@@ -9,7 +9,7 @@ nav {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #344374;
     position: relative;
@@ -17,14 +17,15 @@ header {
 
 section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 .title-box {
+    top: 36vh;
     position: relative;
     color: white;
-    margin: 50px auto 0 auto;
+    margin: 0 auto 0 auto;
     width: fit-content;
     text-align: center;
 }
@@ -50,6 +51,7 @@ section {
 }
 
 .title-box hr {
+    width: 15em;
     margin-top: 1.2em;
     margin-bottom: 1.2em;
 }
@@ -59,7 +61,7 @@ section {
     font-size: 1.2em;
     padding: 6px;
     margin: 1.2em auto 0 auto;
-    width: fit-content;
+    width: 200px;
     background: #F7931D;
 }
 
@@ -73,12 +75,16 @@ section {
 
 .learn-more {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     margin: 0 auto 0 auto;
     color: white;
     width: 100%;
     text-align: center;
     font-weight: 200;
+}
+
+.learn-more:hover {
+    cursor: pointer;
 }
 
 .learn-more p {
@@ -91,9 +97,12 @@ section {
 
 .mirror-ball-stick {
     width: 3px;
-    height: 15vh;
+    height: 12vh;
     background: rgb(100,100,100);
     margin: 0 auto 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 
 .mirror-ball {
@@ -103,15 +112,28 @@ section {
     border-radius: 100%;
     margin: 0 auto 0 auto;
     overflow: hidden;
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    right: 0;
 }
+
+.mirror-ball-container {
+    width: 320px;
+    height: 160px;
+    margin-left: -150px;
+
+}
+
 .mirror-ball-particle {
     width: 15px;
     height: 15px;
     background: white;
     border-radius: 100%;
-    animation: blink 1s infinite;
+    animation: blink 1s infinite, move 10s linear infinite;
     display: inline-block;
     margin: 3px;
+    position: relative;
 }
 
 .dgd-logo {
@@ -122,14 +144,383 @@ section {
     background: #F7931D;
 }
 
-@keyframes blink{
+#one .section-header {
+    padding-top: 10vh;
+    margin: 0 auto 0 auto;
+    color: white;
+    height: 40vh;
+    background: url(../img/section_bg1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
+    text-align: center;
+}
+
+#one .section-header img {
+    height: 16vh;
+}
+
+#one .section-header h1 {
+    font-size: 2.6em;
+    font-weight: bold;
+}
+
+#one .section-contents {
+    color: white;
+    font-size: 1.4em;
+    max-width: 1600px;
+    width: 90vw;
+    margin: 0 auto 0 auto;
+}
+
+#two {
+    background: #478d89;
+    color: white;
+}
+
+#two .section-header {
+    padding-top: 5vh;
+    text-align: center;
+}
+
+#two .section-header h1{
+    font-size: 2.6em;
+    margin: 0.5em;
+}
+
+#two .section-header .icon {
+    height: 16vh;
+    max-height: 140px;
+    margin: 10px 15px 10px 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#two .section-header span{
+    vertical-align: middle;
+}
+
+#two .section-contents {
+    color: white;
+    font-size: 1.4em;
+    max-width: 1600px;
+    width: 90vw;
+    margin: 0 auto 0 auto;
+}
+
+#three {
+    background: #1e6193;
+    color: white;
+}
+
+#three .section-header {
+    padding-top: 5vh;
+    text-align: center;
+}
+
+#three .section-header h1{
+    font-size: 2.6em;
+    margin: 0.5em;
+}
+
+#three .section-header .icon {
+    height: 16vh;
+    max-height: 140px;
+    margin: 10px 15px 10px 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#three .section-header span{
+    vertical-align: middle;
+}
+
+#three .section-contents {
+    color: white;
+    font-size: 1.4em;
+    max-width: 1600px;
+    width: 90vw;
+    margin: 0 auto 0 auto;
+}
+
+.dongle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #ff9e00;
+    border-radius: 50px;
+}
+
+.dongle .pie {
+    background-color: #1e6193;
+    transform:rotate(60deg);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    clip: rect(0px, 50px, 100px, 0px);
+    animation: nyam1 1s infinite;
+    border: 1px solid #1e6193;
+}
+
+.dongle .hold {
+    position: absolute;
+    transform:rotate(60deg);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    clip: rect(0px, 100px, 100px, 50px);
+    animation: nyam2 1s infinite;
+}
+
+.dongle .eye {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: rgb(60,60,60);
+    left: 70px;
+    top: 20px;
+}
+
+@keyframes nyam1 {
     0% {
+        transform:rotate(60deg);
+    }
+
+    50% {
+        transform:rotate(0deg);
+    }
+    
+    100% {
+        transform:rotate(60deg);
+    }
+}
+
+@keyframes nyam2 {
+    0% {
+        transform:rotate(60deg);
+    }
+
+    50% {
+        transform:rotate(90deg);
+    }
+    
+    100% {
+        transform:rotate(60deg);
+    }
+}
+
+@keyframes blink1{
+    0% {
+        background: grey;
+    }
+    30% {
+        background: grey;
+    }
+    35% {
         background: white;
+    }
+    40% {
+        background: grey;
+    }
+    100% {
+        background: grey;
+    }
+}
+
+@keyframes blink2{
+    0% {
+        background: grey;
+    }
+    10% {
+        background: grey;
+    }
+    15% {
+        background: white;
+    }
+    20% {
+        background: grey;
+    }
+    100% {
+        background: grey;
+    }
+}
+
+@keyframes blink3{
+    0% {
+        background: grey;
     }
     50% {
         background: grey;
     }
-    100% {
+    55% {
         background: white;
+    }
+    60% {
+        background: grey;
+    }
+    100% {
+        background: grey;
+    }
+}
+
+@keyframes blink4{
+    0% {
+        background: grey;
+    }
+    80% {
+        background: grey;
+    }
+    85% {
+        background: white;
+    }
+    90% {
+        background: grey;
+    }
+    100% {
+        background: grey;
+    }
+}
+
+@keyframes blink{
+    0% {
+        background: grey;
+    }
+    35% {
+        background: white;
+    }
+    100% {
+        background: grey;
+    }
+}
+
+@keyframes move{
+    from {
+        left: 0px;
+    }
+    to {
+        left: 147px;
+    }
+}
+
+@media (max-height:768px), (max-device-width: 768px){
+    .title-box h1 {
+        font-size: 2em;
+        letter-spacing: 0.1em;
+        margin: 0;
+    }
+
+    .title-box .date {
+        margin: 0;
+        font-weight: 200;
+        font-size: 1.2em;
+        letter-spacing: 0.24em;
+    }
+
+    .title-box .description {
+        margin: 0;
+        font-weight: 200;
+        letter-spacing: 0.1em;
+        font-size: 1.2em;
+    }
+
+    .title-box hr {
+        width: 9.4em;
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+    }
+
+    .title-box .join-button {
+        font-weight: 400;
+        font-size: 0.8em;
+        padding: 6px;
+        margin: 1.2em auto 0 auto;
+        width: 120px;
+        background: #F7931D;
+    }
+    
+    .mirror-ball {
+        width: 100px;
+        height: 100px;
+        background: rgb(100,100,100); 
+        border-radius: 100%;
+        margin: 0 auto 0 auto;
+        overflow: hidden;
+        line-height: 1.2;
+    }
+
+    .mirror-ball-container {
+        width: 240px;
+        height: 120px;
+        margin-left: -120px;
+
+    }
+
+    .mirror-ball-particle {
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 100%;
+        animation: blink 1s infinite, move 8s linear infinite;
+        display: inline-block;
+        margin: 3px;
+        position: relative;
+    }
+
+    @keyframes move{
+        from {
+            left: 0px;
+        }
+        to {
+            left: 112px;
+        }
+    }
+    .learn-more p {
+        margin: 0 0 6px 0;
+        font-size: 0.8em;
+    }
+
+    .low-arrow img {
+        width: 12px;
+    }
+
+    #one .section-header {
+        padding-top: 5vh;
+        height: 35vh;
+    }
+
+    #one .section-header h1 {
+        letter-spacing: 0.08em;
+        font-size: 1.4em;
+        margin: 15px auto 0 auto;
+    }
+
+    #one .section-contents {
+        font-size: 1em;
+        width: 90vw;
+        margin: 0 auto 0 auto;
+    }
+
+    #two .section-header {
+        padding-top: 5vh;
+        text-align: center;
+    }
+    #two .section-header h1{
+        font-size: 2em;
+        margin: 0.5em;
+    }
+
+    #two .section-header .icon {
+        height: 14vh;
+        max-height: 140px;
+        margin: 6px 6px 6px 6px;
+    }
+
+    #two .section-contents {
+        color: white;
+        font-size: 1.1em;
+        width: 90vw;
+        margin: 0 auto 0 auto;
     }
 }
