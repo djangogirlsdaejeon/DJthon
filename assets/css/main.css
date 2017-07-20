@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
+    min-width: 720px;
 }
 nav {
     position: absolute;   
@@ -18,7 +19,47 @@ header {
 section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 400px;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto 0 auto;
+}
+
+.section-header h1{
+    font-size: 2.4em;
+    margin: 0.5em;
+}
+
+.section-top {
+    max-width: 1200px;
+    height: 160px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    margin: 0 auto 0 auto;
+}
+
+.section-bottom {
+    max-width: 1200px;
+    height: 140px;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    margin: 40px auto 0 auto;
+}
+
+.section-image {
+    height: 400px;
+}
+
+.section-contents {
+    width: 720px;
+    font-weight: 300;
+    font-size: 1.4em;
+    width: 680px;
+    margin: 0 auto 0 auto;
 }
 
 .title-box {
@@ -39,7 +80,7 @@ section {
 .title-box .date {
     margin: 0;
     font-weight: 200;
-    font-size: 1.8em;
+    font-size: 1.5em;
     letter-spacing: 0.24em;
 }
 
@@ -141,23 +182,23 @@ section {
 }
 
 #one {
-    background: #F7931D;
-}
-
-#one .section-header {
-    padding-top: 10vh;
-    margin: 0 auto 0 auto;
-    color: white;
-    height: 40vh;
+    height: 800px;
     background: url(../img/section_bg1.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position-x: center;
+}
+
+#one .section-header {
+    padding-top: 80px;
+    margin: 0 auto 0 auto;
+    color: white;
+    height: 340px;
     text-align: center;
 }
 
 #one .section-header img {
-    height: 16vh;
+    height: 135px;
 }
 
 #one .section-header h1 {
@@ -168,29 +209,38 @@ section {
 #one .section-contents {
     color: white;
     font-size: 1.4em;
-    max-width: 1600px;
-    width: 90vw;
     margin: 0 auto 0 auto;
 }
 
+#one .section-contents h3 {
+    margin-top: 0;
+}
+
+#one .section-contents-wrapper {
+    background: rgba(60,60,60, 0.8);
+    height: 600px;
+    padding: 20px;
+    bottom: 0px;
+}
+
 #two {
-    background: #478d89;
+    background: #354375;
     color: white;
+    height: auto;
+    padding-bottom: 0;
 }
 
-#two .section-header {
-    padding-top: 5vh;
-    text-align: center;
+#two .section-top {
+    background-image: url(../img/desk-top.png);
+    height: 170px;
 }
 
-#two .section-header h1{
-    font-size: 2.6em;
-    margin: 0.5em;
+#two .section-bottom {
+    background-image: url(../img/desk-bottom.png);
 }
 
 #two .section-header .icon {
-    height: 16vh;
-    max-height: 140px;
+    height: 100px;
     margin: 10px 15px 10px 15px;
     display: inline-block;
     vertical-align: middle;
@@ -202,25 +252,26 @@ section {
 
 #two .section-contents {
     color: white;
-    font-size: 1.4em;
-    max-width: 1600px;
-    width: 90vw;
-    margin: 0 auto 0 auto;
 }
 
 #three {
-    background: #1e6193;
+    background: #2b3660;
     color: white;
+    height: auto;
+}
+
+#three .section-top {
+    background-image: url(../img/pizza.png);
+    height: 150px;
 }
 
 #three .section-header {
-    padding-top: 5vh;
-    text-align: center;
+    overflow: hidden;
 }
 
-#three .section-header h1{
-    font-size: 2.6em;
-    margin: 0.5em;
+#three .section-bottom {
+    background-image: url(../img/chicken_bg.png);
+    margin-top: 0px;
 }
 
 #three .section-header .icon {
@@ -237,10 +288,16 @@ section {
 
 #three .section-contents {
     color: white;
-    font-size: 1.4em;
-    max-width: 1600px;
-    width: 90vw;
+}
+
+.picture-wrapper {
+    width: 500px;
+    height: 110px;
     margin: 0 auto 0 auto;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: right;
 }
 
 .dongle {
@@ -252,7 +309,7 @@ section {
 }
 
 .dongle .pie {
-    background-color: #1e6193;
+    background-color: #2b3660;
     transform:rotate(60deg);
     position: absolute;
     width: 100px;
@@ -260,7 +317,7 @@ section {
     border-radius: 50px;
     clip: rect(0px, 50px, 100px, 0px);
     animation: nyam1 1s infinite;
-    border: 1px solid #1e6193;
+    border: 2px solid #2b3660;
 }
 
 .dongle .hold {
@@ -281,6 +338,109 @@ section {
     background: rgb(60,60,60);
     left: 70px;
     top: 20px;
+}
+
+.food-icon {
+    height: 100px;
+    position: relative;
+    visibility: hidden;
+}
+
+.chicken{
+    animation: food1 3s linear infinite;
+    animation-delay: 0s;
+    -webkit-animation: food1 4s linear infinite;
+    -webkit-animation-delay: 0s;
+    z-index: 100;
+}
+
+.coke{
+    animation: food2 3s linear infinite;
+    animation-delay: 1.2s;
+    -webkit-animation: food2 4s linear infinite;
+    -webkit-animation-delay: 1.2s; 
+    z-index: 101;
+}
+.snack{
+    animation: food3 3s linear infinite;
+    animation-delay: 2.5s;
+    -webkit-animation: food3 4s linear infinite;
+    -webkit-animation-delay: 2.5s;
+    z-index: 102;
+}
+
+#four {
+    background: #354375;
+    color: white;
+    height: auto;
+}
+
+#four .section-top {
+    background-image: url(../img/four-top.png);
+}
+
+#four .section-bottom {
+    background-image: url(../img/desk-bottom.png);
+}
+
+@keyframes food1 {
+    0%{
+        transform: translate(250px, 0);
+        visibility: visible;
+    }
+
+    50%{
+        transform: translate(-200px, 0);
+        visibility: visible;
+    }
+
+    51% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes food2 {
+    0%{
+        transform: translate(150px, 0);
+        visibility: visible;
+    }
+
+    50%{
+        transform: translate(-250px, 0);
+        visibility: visible;
+    }
+
+    51% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes food3 {
+    0%{
+        transform: translate(50px, 0);
+        visibility: visible;
+    }
+
+    50%{
+        transform: translate(-330px, 0);
+        visibility: visible;
+    }
+
+    51% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: hidden;
+    }
 }
 
 @keyframes nyam1 {
@@ -404,7 +564,47 @@ section {
     }
 }
 
-@media (max-height:768px), (max-device-width: 768px){
+@media (max-device-width: 768px){
+
+    body {
+        min-width: 100%;
+    }
+        
+    .section-header h1{
+        font-size: 1.6em;
+        margin: 0.5em;
+    }
+
+    .section-contents {
+        width: 80vw;
+        font-size: 1em;
+        margin: 0 auto 0 auto;
+    }
+
+    .section-top {
+        width: 100vw;
+        height: 60px;
+        background-position-x: center;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        margin: 0 auto 0 auto;
+    }
+
+    .section-bottom {
+        width: 100vw;
+        height: 40px;
+        background-position-x: center;
+        background-position-y: top;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        margin: 40px auto 0 auto;
+    }
+
+    .section-image {
+        height: 400px;
+    }
+
     .title-box h1 {
         font-size: 2em;
         letter-spacing: 0.1em;
@@ -414,7 +614,7 @@ section {
     .title-box .date {
         margin: 0;
         font-weight: 200;
-        font-size: 1.2em;
+        font-size: 1em;
         letter-spacing: 0.24em;
     }
 
@@ -422,7 +622,7 @@ section {
         margin: 0;
         font-weight: 200;
         letter-spacing: 0.1em;
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
 
     .title-box hr {
@@ -485,42 +685,81 @@ section {
         width: 12px;
     }
 
+    #one {
+        height: 660px;
+    }
+
     #one .section-header {
-        padding-top: 5vh;
-        height: 35vh;
+        padding-top: 60px;
+        text-align: center;
+        height: 280px;
+    }
+
+    #one .section-header img {
+        height: 100px;
     }
 
     #one .section-header h1 {
-        letter-spacing: 0.08em;
-        font-size: 1.4em;
-        margin: 15px auto 0 auto;
+        font-size: 1.8em;
+        font-weight: bold;
     }
 
     #one .section-contents {
+        color: white;
         font-size: 1em;
-        width: 90vw;
         margin: 0 auto 0 auto;
     }
 
-    #two .section-header {
-        padding-top: 5vh;
-        text-align: center;
+    #one .section-contents h3 {
+        font-size: 1.2em;
     }
-    #two .section-header h1{
-        font-size: 2em;
-        margin: 0.5em;
+
+    #one .section-contents-wrapper {
+        background: rgba(60,60,60, 0.8);
+        padding: 20px;
+        bottom: 0px;
+    }
+    #two .section-top {
+        height: 60px;
+    }
+
+    #two .section-top {
+        height: 60px;
     }
 
     #two .section-header .icon {
-        height: 14vh;
-        max-height: 140px;
-        margin: 6px 6px 6px 6px;
+        height: 70px;
+        margin: 5px 10px 5px 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    #three .section-top {
+        height: 60px;
     }
 
-    #two .section-contents {
-        color: white;
-        font-size: 1.1em;
-        width: 90vw;
-        margin: 0 auto 0 auto;
+    #three .section-bottom {
+        height: 60px;
+        background-size: cover;
+    }
+
+    .picture-wrapper {
+        text-align: center;
+        width: 100vw;
+        height: 70px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dongle {
+        display: none;
+    }
+
+    .food-icon {
+        height: 70px;
+        animation: none;
+        margin: 5px 20px 5px 20px;
+        display: inline-block;
+        visibility: visible;
     }
 }
