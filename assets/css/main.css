@@ -687,6 +687,7 @@ section {
 
     #one {
         height: 660px;
+        background-attachment: initial;
     }
 
     #one .section-header {
