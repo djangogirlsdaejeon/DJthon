@@ -194,7 +194,7 @@ section {
 .mirror-ball {
     width: 150px;
     height: 150px;
-    background: rgb(100,100,100); 
+    background: rgb(100,100,100);
     border-radius: 100%;
     margin: 0 auto 0 auto;
     overflow: hidden;
@@ -396,7 +396,7 @@ section {
     animation: food2 3s linear infinite;
     animation-delay: 1.2s;
     -webkit-animation: food2 4s linear infinite;
-    -webkit-animation-delay: 1.2s; 
+    -webkit-animation-delay: 1.2s;
     z-index: 101;
 }
 .snack{
@@ -457,7 +457,7 @@ section {
 }
 
 .session-box {
-    width: 120px;
+    width: 128px;
     height: 140px;
     text-align: center;
     display: inline-block;
@@ -472,41 +472,45 @@ section {
     margin: 0 auto 0 auto;
 }
 
-.time-a .session-box:nth-child(1) .session-icon {
+.time-a .session-box:nth-child(5n+1) .session-icon {
     background-color: #66ecda;
 }
 
-.time-a .session-box:nth-child(2) .session-icon {
+.time-a .session-box:nth-child(5n+2) .session-icon {
     background-color: #3ab6ff;
 }
 
-.time-a .session-box:nth-child(3) .session-icon {
+.time-a .session-box:nth-child(5n+3) .session-icon {
     background-color: #ff9d37;
 }
 
-.time-a .session-box:nth-child(4) .session-icon {
+.time-a .session-box:nth-child(5n+4) .session-icon {
     background-color: #52a9d2;
 }
 
-.time-a .session-box:nth-child(5) .session-icon {
+.time-a .session-box:nth-child(5n+5) .session-icon {
     background-color: #ff5e4e;
 }
 
-.time-b .session-box:nth-child(1) .session-icon {
+.time-b .session-box:nth-child(5n+1) .session-icon {
     background-color: #ba58c5;
 }
 
-.time-b .session-box:nth-child(2) .session-icon {
+.time-b .session-box:nth-child(5n+2) .session-icon {
     background-color: #ff2877;
 }
 
-.time-b .session-box:nth-child(3) .session-icon {
+.time-b .session-box:nth-child(5n+3) .session-icon {
     background-color: #ff6428;
 }
 
-.time-b .session-box:nth-child(4) .session-icon {
-    background-color: #ff6428;
+.time-b .session-box:nth-child(5n+4) .session-icon {
+    background-color: #3ab6ff;
 }
+.time-b .session-box:nth-child(5n+5) .session-icon {
+    background-color: #ff5e4e;
+}
+
 
 .session-icon img {
     width: 32px;
@@ -674,7 +678,7 @@ footer {
     50% {
         transform:rotate(0deg);
     }
-    
+
     100% {
         transform:rotate(60deg);
     }
@@ -688,7 +692,7 @@ footer {
     50% {
         transform:rotate(90deg);
     }
-    
+
     100% {
         transform:rotate(60deg);
     }
@@ -856,7 +860,7 @@ footer {
     header {
         min-height: 480px;
     }
-        
+
     .section-header h1{
         font-size: 1.4em;
         margin: 0.5em;
@@ -927,11 +931,11 @@ footer {
         width: 120px;
         background: #F7931D;
     }
-    
+
     .mirror-ball {
         width: 100px;
         height: 100px;
-        background: rgb(100,100,100); 
+        background: rgb(100,100,100);
         border-radius: 100%;
         margin: 0 auto 0 auto;
         overflow: hidden;
@@ -1016,7 +1020,7 @@ footer {
     #two .section-top {
         height: 60px;
     }
-    
+
     #three .section-top {
         height: 60px;
     }
@@ -1085,7 +1089,7 @@ footer {
         height: 26px;
         margin-top: 6px;
     }
-    
+
     #six .section-contents {
         text-align: center;
         width: 90vw;
