@@ -50,7 +50,7 @@ nav .nav-button {
 header {
     width: 100%;
     height: 100vh;
-    min-height: 550px;
+    min-height: 715px;
     background: #344374;
     position: relative;
 }
@@ -108,8 +108,36 @@ section {
     margin: 0 auto 0 auto;
 }
 
+.spotlight {
+    position: absolute;
+    height: 0;
+    width: 200px;
+    border-bottom: 100vh solid transparent;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    margin: 0 auto 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.spot-blink {
+    animation: s-blink ease 2s infinite;
+}
+
+@keyframes s-blink {
+    0% {
+        border-bottom: 100vh solid transparent;
+    }
+    70% {
+        border-bottom: 100vh solid #ff069b;
+    }
+    100% {
+        border-bottom: 100vh solid transparent;
+    }
+}
+
 .title-box {
-    top: 40%;
+    top: 30%;
     position: relative;
     color: white;
     margin: 0 auto 0 auto;
@@ -118,15 +146,15 @@ section {
 }
 
 .title-box h1 {
-    font-size: 2.6em;
-    letter-spacing: 0.1em;
+    font-size: 3.05em;
+    letter-spacing: 0.13em;
     margin: 0;
 }
 
 .title-box .date {
     margin: 0;
     font-weight: 200;
-    font-size: 1.12em;
+    font-size: 1.36em;
     letter-spacing: 0.24em;
 }
 
@@ -137,8 +165,31 @@ section {
     font-size: 1.4em;
 }
 
+.title-box .where {
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 1em;
+    letter-spacing: 0.13em;
+}
+
+.title-box p span {
+    margin: 4px;
+    font-weight: 500;
+    font-size: 0.9em;
+    font-style: italic;
+    background-color: white;
+    color: #344374;
+    padding: 2px 8px 2px 8px;
+    border-radius: 20px;
+    line-height: 2.5em;
+}
+
+#timer {
+    font-size: 1em;
+}
+
 .title-box hr {
-    width: 10.5em;
+    width: 12.5em;
     margin-top: 1.2em;
     margin-bottom: 1.2em;
 }
@@ -150,9 +201,11 @@ section {
     margin: 1.2em auto 0 auto;
     width: 200px;
     background: #F7931D;
+    transition: 1s ease-in-out;
 }
 
 .title-box .join-button:hover {
+    background-color: #ff069b;
     cursor: pointer;
 }
 
@@ -193,14 +246,14 @@ section {
 }
 
 .mirror-ball {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background: rgb(100,100,100);
     border-radius: 100%;
     margin: 0 auto 0 auto;
     overflow: hidden;
     position: absolute;
-    top: 12vh;
+    top: 10%;
     left: 0;
     right: 0;
 }
@@ -264,7 +317,7 @@ section {
 
 #one .section-contents-wrapper {
     background: rgba(60,60,60, 0.8);
-    height: 600px;
+    height: 340px;
     padding: 20px;
     bottom: 0px;
 }
@@ -924,8 +977,19 @@ footer .content-wrapper {
         height: 400px;
     }
 
+    .spotlight {
+        position: absolute;
+        height: 0;
+        width: 140px;
+        border-bottom: 100vh solid transparent;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        margin: 0 auto 0 auto;
+        left: 0;
+        right: 0;
+    }
     .title-box {
-        top: 35%;
+        top: 30%;
     }
 
     .title-box h1 {
@@ -933,7 +997,7 @@ footer .content-wrapper {
     }
 
     .title-box .date {
-        font-size: 0.85em;
+        font-size: 0.9em;
         letter-spacing: 0.24em;
     }
 
@@ -944,24 +1008,52 @@ footer .content-wrapper {
         font-size: 1em;
     }
 
+    .title-box .where {
+        margin-top: 5px;
+        font-weight: 200;
+        font-size: 0.67em;
+        letter-spacing: 0.13em;
+    }
+
+    .title-box p span {
+        margin: 4px;
+        font-weight: 500;
+        font-size: 0.6em;
+        font-style: italic;
+        background-color: white;
+        color: #344374;
+        padding: 2px 8px 2px 8px;
+        border-radius: 20px;
+        line-height: 2.5em;
+    }
+
+    .title-box p {
+        margin: 8px;
+    }
+
+    #timer {
+        font-size: 0.6em;
+    }
+
+
     .title-box hr {
-        width: 7.95em;
-        margin-top: 1.2em;
-        margin-bottom: 1.2em;
+        width: 8.4em;
+        margin-top: 0.8em;
+        margin-bottom: 0.6em;
     }
 
     .title-box .join-button {
         font-weight: 400;
         font-size: 0.8em;
         padding: 6px;
-        margin: 1.2em auto 0 auto;
+        margin: 0.8em auto 0 auto;
         width: 120px;
         background: #F7931D;
     }
 
     .mirror-ball {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background: rgb(100,100,100);
         border-radius: 100%;
         margin: 0 auto 0 auto;
