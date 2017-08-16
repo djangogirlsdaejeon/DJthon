@@ -418,8 +418,36 @@ section {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    clip: rect(0px, 100px, 100px, 50px);
+    clip: rect(-50px, 100px, 100px, 50px);
     animation: nyam2 1s infinite;
+}
+
+@keyframes nyam1 {
+    0% {
+        transform:rotate(60deg);
+    }
+
+    50% {
+        transform:rotate(0deg);
+    }
+
+    100% {
+        transform:rotate(60deg);
+    }
+}
+
+@keyframes nyam2 {
+    0% {
+        transform:rotate(60deg);
+    }
+
+    50% {
+        transform:rotate(90deg);
+    }
+
+    100% {
+        transform:rotate(60deg);
+    }
 }
 
 .dongle .eye {
@@ -746,34 +774,6 @@ footer .content-wrapper {
 
     100% {
         visibility: hidden;
-    }
-}
-
-@keyframes nyam1 {
-    0% {
-        transform:rotate(60deg);
-    }
-
-    50% {
-        transform:rotate(0deg);
-    }
-
-    100% {
-        transform:rotate(60deg);
-    }
-}
-
-@keyframes nyam2 {
-    0% {
-        transform:rotate(60deg);
-    }
-
-    50% {
-        transform:rotate(90deg);
-    }
-
-    100% {
-        transform:rotate(60deg);
     }
 }
 
