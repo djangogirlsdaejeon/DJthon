@@ -53,7 +53,7 @@ $(document).ready(function(){
         dDay.h = 24 - date.getHours();
         dDay.m = 59- date.getMinutes();
         dDay.s = 59- date.getSeconds();;
-        if (dDay.d+dDay.h+dDay.m+dDay.s > 0) {
+        if (dDay.d >= 0) {
             $timer.text('마감까지 '
                 + Math.floor(dDay.d/10) + dDay.d%10 + '일 ' 
                 + Math.floor(dDay.h/10) + dDay.h%10 + '시간 '
