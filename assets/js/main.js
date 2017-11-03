@@ -5,6 +5,9 @@ $(document).ready(function(){
     let $one = $('#one');
     let $joinBtn = $('.join-button');
     let $navBar = $('nav');
+    let $naveButton = $('.nav-button');
+    let $navLink = $('#nav-link');
+    let $titleLink = $('#title-link');
 
     if ($(window).scrollTop() > $joinBtn.offset().top) {
             $navBar.fadeIn();
@@ -47,13 +50,24 @@ $(document).ready(function(){
     let $timer = $('#timer');
     let dDay = {};
 
-    setInterval(()=>{ 
-        let date = new Date();
+    let date = new Date();
+
+    function endTimer(){
+        $timer.text('');
+        $joinBtn.text('신청이 마감되었습니다');
+        $naveButton.text('신청 마감');
+        $navLink.attr('href','')
+                .attr('target','_self');
+        $titleLink.attr('href','')
+                  .attr('target','_self');;
+    }
+
+    function timer(){
         dDay.d = 17 - date.getDate();
         dDay.h = 24 - date.getHours();
-        dDay.m = 59- date.getMinutes();
-        dDay.s = 59- date.getSeconds();;
-        if (dDay.d >= 0) {
+        dDay.m = 59 - date.getMinutes();
+        dDay.s = 59 - date.getSeconds();;
+        if (dDay.d >= 0 && date.getMonth() == 8) {
             $timer.text('마감까지 '
                 + Math.floor(dDay.d/10) + dDay.d%10 + '일 ' 
                 + Math.floor(dDay.h/10) + dDay.h%10 + '시간 '
@@ -61,6 +75,11 @@ $(document).ready(function(){
                 + Math.floor(dDay.s/10) + dDay.s%10 + '초'
             )
         } else {
-            $timer.text('신청이 마감되었습니다');
-        } },1000);
+            endTimer();
+        } 
+    }
+
+    endTimer();
+    if (date.getFullYear() == 2017 && date.getMonth() == 8)
+        setInterval(timer,1000);
 });
